@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.home.view.MainWindowController">
+   <children>
+      <TableView fx:id="goodsTable" layoutY="76.0" onMousePressed="#onMouseGoodsPressed" prefHeight="327.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="idTypeColumn" prefWidth="173.0" text="Type" />
+            <TableColumn fx:id="countryColumn" prefWidth="158.0" text="Country" />
+            <TableColumn fx:id="restColumn" prefWidth="99.0" text="Rest" />
+            <TableColumn fx:id="priceColumn" prefWidth="94.0" text="Price" />
+        </columns>
+      </TableView>
+      <HBox layoutX="271.0" layoutY="428.0" spacing="5.0">
+         <children>
+            <Button layoutX="341.0" layoutY="428.0" mnemonicParsing="false" onAction="#OnClickEditButton" prefHeight="25.0" prefWidth="75.0" text="Edit" />
+            <Button layoutX="426.0" layoutY="428.0" mnemonicParsing="false" onAction="#OnClickAddButton" prefHeight="25.0" prefWidth="75.0" text="Add" />
+            <Button layoutX="511.0" layoutY="428.0" mnemonicParsing="false" onAction="#OnClickDeleteButton" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+            <Button layoutX="170.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnClickCancelButton" prefHeight="25.0" prefWidth="75.0" text="Cancel" />
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="20.0" spacing="5.0">
+         <children>
+            <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#OnClickBillsButton" prefHeight="40.0" prefWidth="150.0" text="GoToBills">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="164.0" layoutY="20.0" mnemonicParsing="false" onAction="#OnClickViewPropButton" prefHeight="40.0" prefWidth="150.0" text="ViewProperties">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</Pane>

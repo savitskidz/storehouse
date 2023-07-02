@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.home.view.BillsWindowController">
+   <children>
+      <TableView fx:id="billsTable" layoutY="60.0" prefHeight="360.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="billColumn" prefWidth="57.0" text="Bill" />
+            <TableColumn fx:id="dateColumn" prefWidth="239.0" text="Date" />
+            <TableColumn fx:id="priceColumn" prefWidth="158.0" text="Price" />
+            <TableColumn fx:id="discColumn" prefWidth="123.0" text="Discount" />
+        </columns>
+      </TableView>
+      <HBox layoutX="172.0" layoutY="442.0" spacing="5.0">
+         <children>
+            <Button layoutX="440.0" layoutY="442.0" mnemonicParsing="false" onAction="#OnClickViewButton" prefHeight="25.0" prefWidth="75.0" text="View" />
+            <Button layoutX="492.0" layoutY="442.0" mnemonicParsing="false" onAction="#OnClickNewButton" prefHeight="25.0" prefWidth="75.0" text="Add" />
+            <Button layoutX="544.0" layoutY="442.0" mnemonicParsing="false" onAction="#OnClickEditButton" prefHeight="25.0" prefWidth="75.0" text="Edit" />
+            <Button layoutX="596.0" layoutY="442.0" mnemonicParsing="false" onAction="#OnClickDeleteButton" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+            <Button layoutX="250.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnClickCancelButton" prefHeight="25.0" prefWidth="75.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</Pane>

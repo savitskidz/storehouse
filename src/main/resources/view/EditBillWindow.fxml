@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.home.view.EditBillWindowController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="120.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" maxWidth="295.0" minWidth="10.0" prefWidth="207.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.0" minWidth="10.0" prefWidth="393.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="billField" GridPane.columnIndex="1" />
+            <Label text="Bill" />
+            <Label text="Date" GridPane.rowIndex="1" />
+            <TextField fx:id="dateField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+      <HBox layoutX="194.0" layoutY="448.0" spacing="5.0">
+         <children>
+            <Button fx:id="addButton" layoutX="194.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClickAddButton" prefHeight="25.0" prefWidth="75.0" text="Add" />
+            <Button fx:id="editButton" layoutX="269.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClickEditButton" prefHeight="25.0" prefWidth="75.0" text="Edit" />
+            <Button fx:id="deleteButton" layoutX="344.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClickDeleteButton" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+            <Button fx:id="saveButton" layoutX="419.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClicklSaveButton" prefHeight="25.0" prefWidth="75.0" text="Save" />
+            <Button layoutX="494.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClickCancelButton" prefHeight="25.0" prefWidth="75.0" text="Cancel" />
+         </children>
+      </HBox>
+      <TableView fx:id="editBillTable" layoutX="14.0" layoutY="127.0" prefHeight="311.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="goodsColumn" prefWidth="90.0" text="Goods" />
+            <TableColumn fx:id="dateColumn" prefWidth="165.0" text="Date" />
+            <TableColumn fx:id="discountColumn" prefWidth="56.0" text="Id Disc" />
+            <TableColumn fx:id="kolvoColumn" prefWidth="62.0" text="Kol-vo" />
+            <TableColumn fx:id="priceColumn" prefWidth="91.0" text="Price" />
+            <TableColumn fx:id="discMoneyColumn" prefWidth="83.0" text="Discount" />
+        </columns>
+      </TableView>
+      <Button fx:id="calcDiscount" layoutX="14.0" layoutY="448.0" mnemonicParsing="false" onAction="#onClickDiscButton" prefHeight="25.0" prefWidth="75.0" text="Discount" />
+   </children>
+</Pane>
